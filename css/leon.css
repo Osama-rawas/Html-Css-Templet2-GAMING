@@ -1,0 +1,491 @@
+
+:root{
+  --first-color:#170d42;
+  --second-color:#2b1054;
+  --section-padding:60px;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--first-color);
+}
+/* start componant */
+.special-heading{
+ 
+  font-size: 90px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: -2px;
+  margin: 30px;
+  margin-top:0 ;
+  padding-top:60px ;
+  color:#312957;
+}
+.special-heading + p{
+  margin: -55px 0 0 0;
+  text-align: center;
+  font-size: 20px;
+  color: #ff3072;
+}
+@media (max-width:767px){
+  .special-heading{
+    font-size: 60px;
+  }
+}
+@media (max-width:767px){
+  .special-heading +p{
+    margin: -30px 0 0 0;
+  }
+}
+
+
+/* end componant */
+
+.container{
+    padding: 0 50px;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+@media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+     .container {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1320px;
+    }
+  }
+  /* end global rules  */
+
+  /* start header */
+  .header{
+    padding: 20px 0;
+    background-color: var(--first-color);
+  }
+  .header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .logo{
+   width: 80px;
+  }
+  .header .links{
+    position: relative;
+  }
+  .header .icon {
+    width: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .header .icon span{
+    background-color: #2c7784;
+    height: 3px;
+    width: 50px;
+    margin-bottom: 6px;
+  }
+  .header .icon:hover span:nth-child(2){
+    width: 100% ;
+  }
+  .header .icon span:nth-child(2){
+    width: 60%;
+    transition: 0.5s;
+  }
+  .header .links ul {
+    position: absolute;
+    list-style: none;
+    right: 0;
+    padding: 0;
+    margin: 0 ;
+    position: absolute;
+    top: calc(100% + 8px);
+    min-width: 200px;
+    background-color:#2c7784 ;
+    display: none;
+  }
+  .header .links:hover ul {
+ display: block;
+  }
+  .header .links ul ::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #2c7784 transparent;
+    position: absolute;
+    top: -19px;
+    right:10px;
+  }
+  .header .links li{
+    margin: 13px 10px;
+    padding: 12px;
+  }
+  .header .links li:not(:last-child){
+    border-bottom:3px slategray solid ;
+  }
+  .header .links li a{
+    color: aliceblue;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  .header .links li a:hover{
+    padding-left:15px ;
+    color: #ff00fe;
+  }
+/* end heding */
+
+ /* start landing section  */
+ .hero{
+  background-image: url("/wp11908415-gaming-bedroom-wallpapers.jpg");
+  background-size: cover;
+  text-align: center;
+  background-position: center;
+  height:calc(100vh - 73px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ 
+ 
+ .hero .intro-text h1{
+  color: #10cab7;
+  font-size: 60px;
+  margin-top: 0;
+  font-style: italic;
+  z-index: 12;
+ }
+ .hero .intro-text p{
+  color:  #ff00fe;
+  width: 70%;
+  margin: 0 auto;
+  font-size: 40px;
+  font-style: italic;
+  line-height: 1.6;
+
+ }
+  /* end landing section  */
+
+  /* start features */
+  .features{
+    padding: var(--section-padding) 0 ;
+    background-color: var(--first-color);
+    
+   }
+   .features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 40px;
+    text-align: center;
+   }
+   .features .feat: not(:nth-child(1)){
+    border-left:2px black solid ;
+   }
+   .features .feat i{
+    color: #ff00fe;
+    font-size: 30px;
+   }
+   .features .feat h3{
+    color: #ff00fe;
+    font-size: 18px;
+   }
+   .features .feat p{
+    color: #10cab7;
+    font-size: 20px;
+    line-height: 1.8;
+    font-size: 18px;
+   }
+   /* end features */
+
+   /* start services */
+   .services{
+    background-color: var(--second-color);
+    padding-bottom:var(--section-padding) ;
+   }
+   .services-containt{
+    margin: 80px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 40px;
+   }
+   .services-containt .srv{
+    display: flex;
+    margin-bottom: 40px;
+   }
+   @media (max-width:767px){
+    .services-containt .srv{
+      position: relative;
+      flex-direction: column;
+      text-align: center;
+    
+    }
+   }
+   .services-containt i{
+    color: #ff3072;
+    flex-basis: 60px;
+    font-size: 30px;
+   }
+   .services-containt .srv .text{
+    flex: 1;
+   }
+   .services-containt .srv .text h3{
+    color: #ff3072;
+    margin: 0 0 20px;
+    font-size: 20px;
+   }
+   .services-containt .srv .text p{
+    font-size: 18px;
+    line-height: 1.8;
+    color: aquamarine;
+   }
+   .services-containt .image{
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    z-index: 0;
+   }
+   .services-containt .image::before{
+    content: "";
+    background-color: #10cab7;
+    width: 80px;
+    height: calc(100% + 80px);
+    position: absolute;
+    top: -40px;
+    right: -10px;
+    z-index:-1;
+   }
+   .services-containt .image img{
+    width:350px;
+    height: 450px;
+   }
+   @media (max-width:1400px){
+    .services-containt .image {
+      display: none;
+    }
+   }
+
+   /* end services */
+   /* start games */
+   .games{
+    background-color:var(--first-color);
+    padding-bottom:var(--section-padding)  ;
+
+   }
+   .games .games-containt{
+    margin: 80px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 40px;
+   }
+   .games .games-containt .card{
+    background-color: #51487d;
+    border-radius: 12px;
+
+   }
+   .games .games-containt .card .info{
+    padding: 20px;
+   }
+   .games .games-containt .card .info h3{
+    margin: 0;
+   }
+   .games .games-containt .card .info p{
+    line-height: 1.8;
+    
+    color: black;
+    font-size: 20px;
+   }
+   .games .games-containt .card img{
+    height: 380px;
+    width:100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+   }
+   /* end games */
+
+   /* start about */
+   .about{
+    padding-bottom: var(--section-padding);
+    background-color: var(--second-color);
+   }
+   .about-containt{
+   margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+
+   }
+   .about-containt .image{
+    position: relative;
+    height: 500px;
+    z-index: 1;
+    margin-bottom: 60px;
+   }
+   @media(max-width:991px) {
+    .about-containt .image{
+      
+      width: 100%;
+      margin-left: 120px;
+    }
+   }
+   
+   .about-containt .image::before{
+    content: "";
+    width: 100px;
+    height: calc(100% + 80px);
+    position: absolute;
+    top: -40px;
+    left  : -20px;
+    z-index: -1;
+    background-color: #312957 ;
+   }
+   .about-containt .image::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 420px;
+    border-left: 80px #312957 solid ;
+    border-bottom: 80px #312957 solid ;
+    top: -40px;
+    right: -150px;
+    z-index: -1;
+   }
+   @media(max-width:767px){
+    .about-containt .image::after{
+     
+      display: none;
+    }
+   }
+   @media(max-width:991px){
+    .about-containt .image::after{
+      left: 320px ;
+    }
+   }
+   .about-containt .image img{
+    width: 380px;
+    height: 500px;
+   }
+
+   @media(max-width:767px){
+    .about-containt .image {
+      margin: auto;
+      margin-bottom: 60px;
+    }
+   }
+   @media(max-width:767px){
+    .about-containt .image img{
+      max-width: 100%;
+    }
+   }
+   .about-containt .info {
+    margin-top: -20px;
+    padding-left:180px ;
+    flex: 1;
+   }
+   @media(max-width:767px){
+    .about-containt .info{
+      padding-left:0 ;
+    }
+   }
+   @media(max-width:991px){
+    .about-containt .info{
+     flex-direction: column;
+     text-align: center;
+    padding-left:0 ;
+    }
+   }
+   .about-containt .info p{
+    line-height: 1.8;
+    font-size: 20px;
+    color: #dcd750;
+   }
+   .about-containt .info p:first-of-type{
+    font-weight:bold ;
+   }
+   .about-containt .info hr{
+    border-color: #312957;
+    width: 60%;
+    display: inline-block;
+   }
+   /* end about */
+   /* start contact */
+   .contact{
+    padding:0 ;
+    background-color: var(--first-color);
+   }
+   .contact .info{
+    margin: var(--section-padding) 0 0;
+    text-align: center;
+   }
+   .contact .info .label{
+    font-size: 40px;
+    font-weight: 800;
+    color: #ff00fe;
+    margin: 5px 0 30px ;
+    letter-spacing: -2px;
+   }
+   .contact .info .link{
+    text-decoration: none;
+    font-size: 28px;
+    color: #ff3072;
+    display: block;
+    margin-bottom: 20px;
+   }
+   .contact .info .social{
+    display: flex;
+    justify-content: center;
+   text-align: center;
+   color: #dcd750;
+   font-size: 20px  ;
+   padding-bottom: 40px;
+   }
+   .contact .info .social i {
+    margin: 18px;
+    color:gray;
+    font-size: 25px;
+   }
+   .contact .info .social .fa-youtube:hover {
+    color: red;
+   }
+   .contact .info .social .fa-facebook-f:hover {
+    color: blue;
+   }
+   .contact .info .social .fa-twitter:hover {
+    color: cornflowerblue;
+   }
+   /* end contact */
+   /* star footer */
+   .footer{
+    text-align: center;
+    background-color: var(--second-color);
+    color: #10cab7;
+    padding: 30px;
+    font-size: 20px;
+   }
+   .footer span {
+    color:#ff3072 ;
+   }
+   /* end footer */
+   
